@@ -1,0 +1,144 @@
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #333;
+  --container-bg: white;
+  --border-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --synonym-bg: #e0e0e0;
+  --btn-bg: #007bff;
+  --btn-hover: #0056b3;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --container-bg: #2d2d2d;
+  --border-color: #444;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --synonym-bg: #555;
+  --btn-bg: #0062cc;
+  --btn-hover: #004999;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--container-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--shadow-color);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.search-box {
+  display: flex;
+  margin: 20px 0;
+}
+
+#search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  background: var(--container-bg);
+  color: var(--text-color);
+}
+
+#search-btn {
+  padding: 10px 20px;
+  background: var(--btn-bg);
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#search-btn:hover {
+  background: var(--btn-hover);
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.word {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.audio-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.details {
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 5px 0;
+}
+
+.meaning {
+  margin: 10px 0;
+  color: var(--text-color);
+}
+
+.example {
+  font-style: italic;
+  color: var(--text-color);
+  opacity: 0.7;
+  border-left: 3px solid var(--btn-bg);
+  padding-left: 10px;
+  margin: 10px 0;
+}
+
+.synonyms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.synonyms span {
+  background: var(--synonym-bg);
+  padding: 3px 8px;
+  border-radius: 5px;
+  color: var(--text-color);
+}
